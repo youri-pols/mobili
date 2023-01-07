@@ -3,10 +3,11 @@
 // ANCHOR General
 body {
     ::selection {
-        background-color: $black;
+        background-color: $orange;
         color: $white;
     }
     font-family: "Carbona";
+    color: $grey;
 }
 
 .container {
@@ -75,7 +76,7 @@ p:last-of-type {
         color: $white;
         &:hover {
             background-color: $orange--light;
-            color: $grey;
+            color: $grey !important;
         }
     }
 }
@@ -90,7 +91,10 @@ p:last-of-type {
         box-shadow: 1px 1px 5px 0 rgb(0 0 0 / 15%);
         .navbar-brand {
             svg {
-                path {
+                .txt {
+                    fill: #1c1e26;
+                }
+                .sofa {
                     stroke: $orange;
                 }
             }
@@ -191,6 +195,19 @@ p:last-of-type {
             border-radius: 10px;
             margin-top: -300px;
             margin-left: auto;
+        }
+    }
+}
+
+// ANCHOR Meubels
+#meubels {
+    .meubel {
+        @include mq(992px) {
+            width: 25% !important;
+        }
+        .txt {
+            padding: 130px 10px 10px 10px;
+            background-color: $orange--light;
         }
     }
 }
