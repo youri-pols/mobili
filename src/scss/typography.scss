@@ -1,61 +1,41 @@
-@import 'mixins';
+@import "mixins";
 
 h1,
 .h1 {
-    font-size: 2.5rem;
-    line-height: 2.875rem;
+    font-weight: 900;
+    font-size: 1.875rem;
+    line-height: 2.1875rem;
     @include mq(992px) {
-        // font-size: rem;
-        // line-height: rem;
+        font-size: 3.75rem;
+        line-height: 4.063rem;
     }
 }
 
 h2,
 .h2 {
-    font-size: 2.1875rem;
-    line-height: 2.5625rem;
-    @include mq(992px) {
-        // font-size: rem;
-        // line-height: rem;
-    }
-}
-
-h3,
-.h3 {
-    font-size: 1.875rem;
-    line-height: 2.25rem;
-    @include mq(992px) {
-        // font-size: rem;
-        // line-height: rem;
-    }
-}
-
-h4,
-.h4 {
-    font-size: 1.5625rem;
-    line-height: 1.9375rem;
-    @include mq(992px) {
-        // font-size: rem;
-        // line-height: rem;
-    }
-}
-
-h5,
-.h5 {
-    font-size: 1.25rem;
-    line-height: 1.625rem;
-    @include mq(992px) {
-        // font-size: rem;
-        // line-height: rem;
-    }
-}
-
-h6,
-.h6 {
-    font-size: 1.125rem;
+    font-weight: bold;
+    font-size: 1.5rem;
     line-height: 1.5rem;
     @include mq(992px) {
-        // font-size: rem;
-        // line-height: rem;
+        font-size: 2.625rem;
+        line-height: 2.625rem;
+    }
+}
+
+p {
+    font-size: 0.75rem;
+    line-height: 1.25rem;
+    @include mq(992px) {
+        font-size: 1rem;
+        line-height: 1.5rem;
+    }
+}
+
+.intro {
+    font-size: 1rem;
+    line-height: 1.25rem;
+    @include mq(992px) {
+        font-size: 1.25rem;
+        line-height: 1.5rem;
     }
 }

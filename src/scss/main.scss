@@ -6,19 +6,27 @@ body {
         background-color: $black;
         color: $white;
     }
+    font-family: "Carbona";
 }
 
 .container {
-    padding-left: 20px;
-    padding-right: 20px;
-    width: min(100%, 1440px - 160px);
+    padding-left: 135px;
+    padding-right: 135px;
+    width: min(100%, 1440px);
     max-width: unset;
-    margin-inline: 80px;
+    @include mx(992px) {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
 }
 
 .container-fluid {
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: 135px;
+    padding-right: 135px;
+    @include mx(992px) {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
 }
 
 .row {
@@ -58,12 +66,49 @@ p:last-of-type {
 // ANCHOR Buttons
 .btn {
     @include btn;
+    &.btn-orange {
+        border: none;
+        padding: 18px 29px;
+        gap: 10px;
+        background: $orange;
+        border-radius: 5px;
+        color: $white;
+        &:hover {
+            background-color: $orange--light;
+            color: $grey;
+        }
+    }
 }
 
 // ANCHOR Navigation
 .navigation {
     padding-top: 15px;
     padding-bottom: 15px;
+    transition: all 0.3s ease;
+    &.scrolled {
+        background-color: $white;
+        box-shadow: 1px 1px 5px 0 rgb(0 0 0 / 15%);
+        .navbar-brand {
+            svg {
+                path {
+                    stroke: $orange;
+                }
+            }
+        }
+        ul {
+            > li {
+                a {
+                    color: $black;
+                    &.btn {
+                        color: $white;
+                    }
+                    &:hover {
+                        text-decoration-color: $black;
+                    }
+                }
+            }
+        }
+    }
     nav {
         padding: 0 !important;
         .navbar-toggler {
@@ -86,15 +131,66 @@ p:last-of-type {
             }
         }
         ul {
+            align-items: center;
             > li {
-                margin-right: 30px;
+                margin-right: 25px;
                 &:last-child {
                     margin-right: 0;
                 }
                 a {
-                    // text-decoration: none;
+                    text-decoration: underline;
+                    text-decoration-color: transparent;
+                    text-decoration-thickness: 3px;
+                    text-underline-offset: 5px;
+                    transition: 0.3s ease-in-out all;
+                    font-weight: 700;
+                    font-size: 18px;
+                    line-height: 22px;
+                    color: $white;
+                    &:hover {
+                        text-decoration-color: $white;
+                    }
                 }
             }
+        }
+    }
+}
+
+// ANCHOR Header
+.header {
+    padding: 220px 0px;
+    background: url(../images/header.jpg);
+    background-size: 100% 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    position: relative;
+    .txt {
+        z-index: 3;
+        color: $white;
+    }
+    &:after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background: rgba(134, 117, 85, 0.75);
+    }
+}
+
+// ANCHOR Twee afbeeldingen + tekst
+.two-img-txt {
+    .img {
+        .img-l {
+            width: 82.7%;
+            border-radius: 10px;
+        }
+        .img-r {
+            width: 50.9%;
+            border-radius: 10px;
+            margin-top: -300px;
+            margin-left: auto;
         }
     }
 }
