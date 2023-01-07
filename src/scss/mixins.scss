@@ -1,0 +1,20 @@
+@mixin mq($size) {
+    @media screen and (min-width: $size) {
+        @content;
+    }
+}
+
+@mixin mx($size) {
+    @media screen and (max-width: $size) {
+        @content;
+    }
+}
+
+@mixin btn {
+    text-decoration: none !important;
+    display: inline-block;
+}
+
+@mixin transition {
+    transition: all 0.2s ease;
+}

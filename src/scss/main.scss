@@ -1,0 +1,100 @@
+@import "reset", "variables", "mixins", "spacing", "typography";
+
+// ANCHOR General
+body {
+    ::selection {
+        background-color: $black;
+        color: $white;
+    }
+}
+
+.container {
+    padding-left: 20px;
+    padding-right: 20px;
+    width: min(100%, 1440px - 160px);
+    max-width: unset;
+    margin-inline: 80px;
+}
+
+.container-fluid {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.row {
+    margin-left: -10px;
+    margin-right: -10px;
+}
+
+[class*="col-"] {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+main {
+    a {
+        text-decoration: underline;
+        font-weight: 600;
+        &:hover {
+            text-decoration-color: transparent;
+        }
+    }
+}
+
+// ANCHOR Spacer
+spacer {
+    display: block;
+    padding-top: 60px;
+    @include mq(992px) {
+        padding-top: 120px;
+    }
+}
+
+p:last-child,
+p:last-of-type {
+    margin-bottom: 0;
+}
+
+// ANCHOR Buttons
+.btn {
+    @include btn;
+}
+
+// ANCHOR Navigation
+.navigation {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    nav {
+        padding: 0 !important;
+        .navbar-toggler {
+            outline: 0 !important;
+            padding: 0 !important;
+            margin: 0 !important;
+            box-shadow: none !important;
+            .navbar-toggler-icon {
+                background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='18' viewBox='0 0 24 18' fill='none'%3E%3Cpath d='M1 17H23Z' fill='black'/%3E%3Cpath d='M1 1H23M1 9H23M1 17H23' stroke='black' stroke-width='2' stroke-miterlimit='10' stroke-linecap='round'/%3E%3C/svg%3E");
+                width: 24px;
+                height: 18px;
+            }
+        }
+        .navbar-brand {
+            padding: 0;
+            max-width: 60%;
+            svg {
+                max-width: 100%;
+                height: auto;
+            }
+        }
+        ul {
+            > li {
+                margin-right: 30px;
+                &:last-child {
+                    margin-right: 0;
+                }
+                a {
+                    // text-decoration: none;
+                }
+            }
+        }
+    }
+}
