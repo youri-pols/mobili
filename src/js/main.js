@@ -3,3 +3,4 @@ import "../scss/styles.scss";
 import * as bootstrap from "bootstrap";
 import "./app";
 import "../../node_modules/isotope-layout/dist/isotope.pkgd.min.js";
+import "../../node_modules/@google/model-viewer/dist/model-viewer.min.js";
