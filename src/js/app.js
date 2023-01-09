@@ -1,4 +1,24 @@
 import "../../node_modules/isotope-layout/dist/isotope.pkgd.min.js";
+import Swiper, { Autoplay, Pagination } from "swiper";
+import "swiper/css";
+import "swiper/css/pagination";
+
+const swiper = new Swiper(".swiper-testimonials", {
+    modules: [Autoplay, Pagination],
+    slidesPerView: 2,
+    watchOverflow: true,
+    spaceBetween: 20,
+    grabCursor: true,
+    speed: 1000,
+    loop: true,
+    autoplay: {
+        delay: 5000,
+    },
+    pagination: {
+        el: document.querySelector(".swiper-pagination-testimonials"),
+        clickable: true,
+    },
+});
 
 const nav = document.querySelector(".navigation");
 
