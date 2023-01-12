@@ -1,12 +1,12 @@
 import "../../node_modules/isotope-layout/dist/isotope.pkgd.min.js";
-import Swiper, { Autoplay, Pagination } from "swiper";
+import Swiper, { Navigation, Pagination } from "swiper";
 import "swiper/css";
 import "swiper/css/pagination";
 
 const swiper = new Swiper(".swiper-testimonials", {
-    modules: [Autoplay, Pagination],
+    modules: [Navigation, Pagination],
     slidesPerView: 2,
-    watchOverflow: true,
+    // watchOverflow: false,
     spaceBetween: 20,
     grabCursor: true,
     speed: 1000,
@@ -14,9 +14,16 @@ const swiper = new Swiper(".swiper-testimonials", {
     autoplay: {
         delay: 5000,
     },
+    navigation: {
+        nextEl: ".testimonial-next",
+        prevEl: ".testimonial-prev",
+    },
     pagination: {
-        el: document.querySelector(".swiper-pagination-testimonials"),
+        el: ".swiper-pagination",
         clickable: true,
+        renderBullet: function (index, className) {
+            return '<span class="' + className + '"></span>';
+        },
     },
 });
 

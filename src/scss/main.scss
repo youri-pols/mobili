@@ -275,3 +275,68 @@ p:last-of-type {
         }
     }
 }
+
+// ANCHOR Testimonial
+#testimonials {
+    .swiper-testimonials {
+        overflow: hidden;
+    }
+    .swiper-slide {
+        border: 1.33686px solid #e7eaec;
+        border-radius: 10px;
+        padding: 32px;
+        .img {
+            justify-content: space-between;
+            display: flex;
+            align-items: flex-start;
+        }
+        .name {
+            padding-block: 10px;
+            h3 {
+                font-weight: 500;
+                font-size: 1.8382rem;
+                line-height: 2.25rem;
+                letter-spacing: 0.02em;
+                color: $black;
+            }
+        }
+    }
+    .swiper {
+        overflow: visible;
+    }
+    .swiper-nav {
+        display: flex;
+        position: absolute;
+        transform: translateY(-50%);
+        width: 100%;
+        top: 50%;
+        .testimonial-next {
+            right: calc(-8.33333% - 20px);
+        }
+        .testimonial-prev {
+            left: calc(-8.33333% - 20px);
+        }
+        .testimonial-next,
+        .testimonial-prev {
+            background-color: $orange;
+            height: 60px;
+            width: 60px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 100%;
+            position: absolute;
+        }
+    }
+    .swiper-pagination {
+        bottom: -30px;
+        position: relative;
+        .swiper-pagination-bullet {
+            background-color: #cdcdcd;
+            margin: 0 var(--swiper-pagination-bullet-horizontal-gap, 6.5px);
+            &.swiper-pagination-bullet-active {
+                background-color: $orange;
+            }
+        }
+    }
+}
