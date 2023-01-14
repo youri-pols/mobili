@@ -1,5 +1,7 @@
-@import '~bootstrap/scss/bootstrap';
+@import "~bootstrap/scss/bootstrap";
 
-@import '../css/fonts.css';
+@import "../css/fonts.css";
 
-@import 'main.scss';
+@import "main.scss";
+
+@import "../../node_modules/@fancyapps/fancybox/dist/jquery.fancybox.min.css";

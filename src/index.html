@@ -7,6 +7,16 @@
         <title>Mobili</title>
     </head>
     <body>
+        <div style="display: none" id="location">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <h2>Locatie van deze meubel</h2>
+                        <p>Om deze meubel te komen kunt u de volgende stappen volgen:<br />- Neem de trap of lift naar verdieping 2.<br />- Zoek naar Rij 10.<br />- Zoek naar blok 8.<br />- Op de balken liggen de verschillende delen van de meubel.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
         <section class="navigation fixed-top">
             <div class="container-fluid">
                 <div class="row justify-content-center">
@@ -35,7 +45,7 @@
                                         <a href="#overons">Over ons</a>
                                     </li>
                                     <li>
-                                        <a href="#reviews">Reviews</a>
+                                        <a href="#testimonials">Reviews</a>
                                     </li>
                                     <li>
                                         <a class="btn btn-orange" href="#appointment">Plan een bezoek</a>
@@ -59,14 +69,14 @@
             </div>
         </section>
         <spacer> </spacer>
-        <section class="two-img-txt">
+        <section id="overons" class="two-img-txt">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-6 img">
+                    <div class="col-md-6 img order-md-0 order-1 mt-md-0 mt-20">
                         <img class="img-l" src="/images/img-l.jpg" alt="Orange bank in een oranje ruimte" />
                         <img class="img-r" src="/images/img-r.jpg" alt="Kruk in een blauwe ruimte" />
                     </div>
-                    <div class="col-lg-5 offset-lg-1 col-md-6 mt-lg-60 mt-20">
+                    <div class="col-lg-5 offset-lg-1 col-md-6 mt-lg-60 order-md-1 order-0">
                         <h2>Lorem ipsum dolor sit amet non si platea</h2>
                         <p class="mt-20">Efficitur sit eleifend augue ad lacinia habitant metus nascetur non si platea dapibus laoreet nam cursus cubilia morbi adipiscing egestas tempus sodales tristique magnis purus maximus parturient mi hac</p>
                     </div>
@@ -75,7 +85,7 @@
         </section>
         <spacer></spacer>
         <section id="meubels">
-            <div class="container">
+            <div class="container mt-lg-0 mt-5">
                 <div class="row justify-content-center">
                     <div class="col-lg-6 col-md-10 text-center">
                         <h2>Een greep uit onze meubels</h2>
@@ -83,23 +93,23 @@
                             <button class="active">
                                 <span>Alles</span>
                             </button>
-                            <button data-meubels=".seats">
+                            <button id="seats" data-meubels=".seats">
                                 <span>Stoelen</span>
                             </button>
-                            <button data-meubels=".table">
+                            <button id="table" data-meubels=".tafel">
                                 <span>Tafels</span>
                             </button>
-                            <button data-meubels=".sofa">
+                            <button id="sofa" data-meubels=".sofa">
                                 <span>Banken</span>
                             </button>
-                            <button data-meubels=".kasten">
+                            <button id="kasten" data-meubels=".kasten">
                                 <span>Kasten</span>
                             </button>
                         </div>
                     </div>
                 </div>
                 <div class="row meubels_filter mt-lg-60 mt-20 position-relative">
-                    <div class="col-lg-3 col-md-6 meubel table">
+                    <div class="col-lg-3 col-md-6 meubel tafel">
                         <div class="img">
                             <model-viewer class="tableglb" disable-tap interaction-prompt="none" camera-target="20m 22m 0" camera-orbit="90deg  0deg 20m" src="/models/table.glb" camera-controls interpolation-decay="200">
                                 <div class="progress-bar hide" slot="progress-bar">
@@ -109,7 +119,7 @@
                             </model-viewer>
                         </div>
                         <div class="txt">
-                            <div class="title">Salon tafel</div>
+                            <div class="title">Eettafel</div>
                             <a href="">
                                 Vind dit product<svg width="33" height="24" viewBox="0 0 33 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M21.1113 1L32.0017 11.8904L21.1113 22.7807" stroke="#1C1E26" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
@@ -128,7 +138,7 @@
                             </model-viewer>
                         </div>
                         <div class="txt">
-                            <div class="title">Salon tafel</div>
+                            <div class="title">Hoek bank</div>
                             <a href="">
                                 Vind dit product<svg width="33" height="24" viewBox="0 0 33 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M21.1113 1L32.0017 11.8904L21.1113 22.7807" stroke="#1C1E26" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
@@ -147,7 +157,7 @@
                             </model-viewer>
                         </div>
                         <div class="txt">
-                            <div class="title">Salon tafel</div>
+                            <div class="title">Luxe stoel</div>
                             <a href="">
                                 Vind dit product<svg width="33" height="24" viewBox="0 0 33 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M21.1113 1L32.0017 11.8904L21.1113 22.7807" stroke="#1C1E26" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
@@ -156,7 +166,7 @@
                             </a>
                         </div>
                     </div>
-                    <div class="col-lg-3 col-md-6 meubel seats">
+                    <div class="col-lg-3 col-md-6 meubel kasten">
                         <div class="img">
                             <model-viewer class="closetglb" disable-tap interaction-prompt="none" camera-target="135cm 0 30cm" camera-orbit="0deg 90deg 10m" src="/models/closet.glb" camera-controls interpolation-decay="200">
                                 <div class="progress-bar hide" slot="progress-bar">
@@ -166,7 +176,7 @@
                             </model-viewer>
                         </div>
                         <div class="txt">
-                            <div class="title">Salon tafel</div>
+                            <div class="title">Kast</div>
                             <a href="">
                                 Vind dit product<svg width="33" height="24" viewBox="0 0 33 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M21.1113 1L32.0017 11.8904L21.1113 22.7807" stroke="#1C1E26" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
@@ -175,7 +185,7 @@
                             </a>
                         </div>
                     </div>
-                    <div class="col-lg-3 col-md-6 meubel seats">
+                    <div class="col-lg-3 col-md-6 meubel kasten">
                         <div class="img">
                             <model-viewer class="gardobglb" disable-tap interaction-prompt="none" camera-target="0 0 0" camera-orbit="0deg 90deg 0" src="/models/gardob_clothes.glb" camera-controls interpolation-decay="200">
                                 <div class="progress-bar hide" slot="progress-bar">
@@ -185,7 +195,7 @@
                             </model-viewer>
                         </div>
                         <div class="txt">
-                            <div class="title">Salon tafel</div>
+                            <div class="title">Kast</div>
                             <a href="">
                                 Vind dit product<svg width="33" height="24" viewBox="0 0 33 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M21.1113 1L32.0017 11.8904L21.1113 22.7807" stroke="#1C1E26" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
@@ -204,8 +214,8 @@
                             </model-viewer>
                         </div>
                         <div class="txt">
-                            <div class="title">Salon tafel</div>
-                            <a href="">
+                            <div class="title">Luxe stoel</div>
+                            <a class="btn-popup" href="#location">
                                 Vind dit product<svg width="33" height="24" viewBox="0 0 33 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M21.1113 1L32.0017 11.8904L21.1113 22.7807" stroke="#1C1E26" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
                                     <path d="M1.5 11.8906H31.6952" stroke="#1C1E26" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
@@ -213,7 +223,7 @@
                             </a>
                         </div>
                     </div>
-                    <div class="col-lg-3 col-md-6 meubel seats">
+                    <div class="col-lg-3 col-md-6 meubel kasten">
                         <div class="img">
                             <model-viewer class="nightstandglb" disable-tap interaction-prompt="none" camera-target="1cm 0 1cm" camera-orbit="0deg 90deg 0" src="/models/nightstand.glb" camera-controls interpolation-decay="200">
                                 <div class="progress-bar hide" slot="progress-bar">
@@ -223,7 +233,7 @@
                             </model-viewer>
                         </div>
                         <div class="txt">
-                            <div class="title">Salon tafel</div>
+                            <div class="title">Nachtkastje</div>
                             <a href="">
                                 Vind dit product<svg width="33" height="24" viewBox="0 0 33 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M21.1113 1L32.0017 11.8904L21.1113 22.7807" stroke="#1C1E26" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
@@ -232,7 +242,7 @@
                             </a>
                         </div>
                     </div>
-                    <div class="col-lg-3 col-md-6 meubel seats">
+                    <div class="col-lg-3 col-md-6 meubel sofa">
                         <div class="img">
                             <model-viewer class="sofa2glb" disable-tap interaction-prompt="none" camera-target="1cm 0 3m" camera-orbit="-90deg 90deg 0" src="/models/sofa_2.glb" camera-controls interpolation-decay="200">
                                 <div class="progress-bar hide" slot="progress-bar">
@@ -242,8 +252,8 @@
                             </model-viewer>
                         </div>
                         <div class="txt">
-                            <div class="title">Salon tafel</div>
-                            <a href="">
+                            <div class="title">Bank</div>
+                            <a class="btn-popup" href="">
                                 Vind dit product<svg width="33" height="24" viewBox="0 0 33 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M21.1113 1L32.0017 11.8904L21.1113 22.7807" stroke="#1C1E26" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
                                     <path d="M1.5 11.8906H31.6952" stroke="#1C1E26" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
@@ -386,7 +396,7 @@
                         <h2>Interesse gewekt?</h2>
                         <p>Maak een vrijblijvende afspraak in de winkel om samen uw droomhuis te vullen met de mooiste meubels.</p>
                     </div>
-                    <div class="col-md-6 offset-lg-1">
+                    <div class="col-md-6 offset-lg-1 mt-4 mt-lg-0">
                         <form>
                             <label class="mb-2">Volledige naam</label>
                             <input type="text" name="name" placeholder="Jan Smit" />
@@ -413,6 +423,112 @@
                         </form>
                     </div>
                 </div>
+            </div>
+        </section>
+        <spacer></spacer>
+        <section class="footer">
+            <div class="tl">
+                <svg width="463" height="320" viewBox="0 0 463 320" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect opacity="0.05" x="542.238" y="-78.4832" width="550.773" height="550.773" rx="217" transform="rotate(120 542.238 -78.4832)" fill="#D5A418" />
+                </svg>
+            </div>
+            <div class="top">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-3">
+                            <div class="logo">
+                                <svg width="131" height="35" viewBox="0 0 131 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M67.836 11.428C67.584 8.544 66.072 7.62 64.14 7.62C62.376 7.62 61.144 8.152 60.304 10.504L56.776 20.64L53.248 10.504C52.548 8.544 51.764 7.62 49.524 7.62C47.592 7.62 45.8 8.544 45.52 11.764L44.176 27.5H49.496L50.252 14.956L54.116 25.876C54.62 27.22 55.292 27.668 56.636 27.668C57.672 27.668 58.68 27.444 59.24 25.876L63.104 14.956L63.86 27.5H69.18L67.836 11.428ZM78.6383 27.78C83.9023 27.78 86.5063 24.7 86.5063 20.332C86.5063 16.02 83.9023 12.94 78.6383 12.94C73.3743 12.94 70.7983 16.02 70.7983 20.332C70.7983 24.7 73.3743 27.78 78.6383 27.78ZM78.6383 23.496C76.8743 23.496 76.0343 22.376 76.0343 20.332C76.0343 18.344 76.8743 17.224 78.6383 17.224C80.4023 17.224 81.2703 18.344 81.2703 20.332C81.2703 22.376 80.4023 23.496 78.6383 23.496ZM97.9942 12.94C96.2022 12.94 94.7742 13.612 93.8222 14.956V7.48H88.6422V24.476L88.2222 27.5H93.1782L93.6262 25.428C94.5782 26.996 96.0622 27.78 97.9942 27.78C101.998 27.78 104.07 24.756 104.07 20.332C104.07 15.964 101.998 12.94 97.9942 12.94ZM96.3422 23.496C94.6902 23.496 93.8222 22.376 93.8222 20.332C93.8222 18.344 94.6902 17.224 96.3422 17.224C97.9942 17.224 98.8342 18.344 98.8342 20.332C98.8342 22.376 97.9942 23.496 96.3422 23.496ZM108.773 11.596C110.705 11.596 111.601 10.644 111.601 9.104C111.601 7.592 110.705 6.696 108.773 6.696C106.841 6.696 105.889 7.592 105.889 9.104C105.889 10.644 106.841 11.596 108.773 11.596ZM111.321 27.5V13.22H106.141V27.5H111.321ZM122.08 27.64V23.16H120.596C119.448 23.16 119.056 22.74 119.056 21.62V7.48H113.876V21.592C113.876 25.904 115.752 27.64 119.448 27.64H122.08ZM126.519 11.596C128.451 11.596 129.347 10.644 129.347 9.104C129.347 7.592 128.451 6.696 126.519 6.696C124.587 6.696 123.635 7.592 123.635 9.104C123.635 10.644 124.587 11.596 126.519 11.596ZM129.067 27.5V13.22H123.887V27.5H129.067Z"
+                                        fill="#1C1E26"
+                                    />
+                                    <path d="M2 25.3571V30.5M5.22759 13.3571V9.92857C5.22759 9.01926 5.56763 8.14719 6.17292 7.50421C6.77821 6.86122 7.59916 6.5 8.45517 6.5H27.8207C28.6767 6.5 29.4976 6.86122 30.1029 7.50421C30.7082 8.14719 31.0483 9.01926 31.0483 9.92857V13.3571" stroke="#D5A418" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+                                    <path d="M34.2759 25.3572V30.5M31.0483 13.3572C30.1923 13.3572 29.3713 13.7184 28.766 14.3614C28.1607 15.0044 27.8207 15.8764 27.8207 16.7857V20.2143H8.45517V16.7857C8.45517 15.8764 8.11512 15.0044 7.50983 14.3614C6.90454 13.7184 6.0836 13.3572 5.22759 13.3572C4.37158 13.3572 3.55063 13.7184 2.94534 14.3614C2.34005 15.0044 2 15.8764 2 16.7857V27.0715H34.2759V16.7857C34.2759 15.8764 33.9358 15.0044 33.3305 14.3614C32.7252 13.7184 31.9043 13.3572 31.0483 13.3572Z" stroke="#D5A418" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </div>
+                            <p class="mt-3 mt-lg-5">Lorem ipsum dolor sit amet consectetur. Mi nibh venenatis in suscipit turpis enim cursus</p>
+                            <div class="socials mt-lg-4 mt-2 gap-2 d-flex flex-row flex-wrap">
+                                <a href="#"
+                                    ><svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M22.0469 12C22.0469 6.48 17.5669 2 12.0469 2C6.52688 2 2.04688 6.48 2.04688 12C2.04688 16.84 5.48688 20.87 10.0469 21.8V15H8.04688V12H10.0469V9.5C10.0469 7.57 11.6169 6 13.5469 6H16.0469V9H14.0469C13.4969 9 13.0469 9.45 13.0469 10V12H16.0469V15H13.0469V21.95C18.0969 21.45 22.0469 17.19 22.0469 12Z" fill="#D5A418" />
+                                    </svg>
+                                </a>
+                                <a href="#">
+                                    <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M15.0469 12C15.0469 12.5933 14.8709 13.1734 14.5413 13.6667C14.2116 14.1601 13.7431 14.5446 13.1949 14.7716C12.6467 14.9987 12.0435 15.0581 11.4616 14.9424C10.8797 14.8266 10.3451 14.5409 9.92555 14.1213C9.506 13.7018 9.22027 13.1672 9.10452 12.5853C8.98876 12.0033 9.04817 11.4001 9.27524 10.8519C9.5023 10.3038 9.88682 9.83524 10.3802 9.50559C10.8735 9.17595 11.4535 9 12.0469 9C12.8418 9.00247 13.6034 9.31934 14.1655 9.88141C14.7275 10.4435 15.0444 11.2051 15.0469 12ZM21.4219 7.875V16.125C21.4219 17.5174 20.8688 18.8527 19.8842 19.8373C18.8996 20.8219 17.5643 21.375 16.1719 21.375H7.92188C6.52949 21.375 5.19413 20.8219 4.20956 19.8373C3.225 18.8527 2.67188 17.5174 2.67188 16.125V7.875C2.67188 6.48261 3.225 5.14726 4.20956 4.16269C5.19413 3.17812 6.52949 2.625 7.92188 2.625H16.1719C17.5643 2.625 18.8996 3.17812 19.8842 4.16269C20.8688 5.14726 21.4219 6.48261 21.4219 7.875ZM16.5469 12C16.5469 11.11 16.283 10.24 15.7885 9.49993C15.294 8.75991 14.5912 8.18314 13.769 7.84254C12.9467 7.50195 12.0419 7.41283 11.169 7.58647C10.2961 7.7601 9.49423 8.18868 8.86489 8.81802C8.23556 9.44736 7.80697 10.2492 7.63334 11.1221C7.45971 11.995 7.54882 12.8998 7.88942 13.7221C8.23001 14.5443 8.80679 15.2471 9.54681 15.7416C10.2868 16.2361 11.1569 16.5 12.0469 16.5C13.2403 16.5 14.3849 16.0259 15.2289 15.182C16.0728 14.3381 16.5469 13.1935 16.5469 12ZM18.0469 7.125C18.0469 6.9025 17.9809 6.68499 17.8573 6.49998C17.7337 6.31498 17.558 6.17078 17.3524 6.08564C17.1468 6.00049 16.9206 5.97821 16.7024 6.02162C16.4842 6.06502 16.2837 6.17217 16.1264 6.3295C15.969 6.48684 15.8619 6.68729 15.8185 6.90552C15.7751 7.12375 15.7974 7.34995 15.8825 7.55552C15.9677 7.76109 16.1119 7.93679 16.2969 8.0604C16.4819 8.18402 16.6994 8.25 16.9219 8.25C17.2202 8.25 17.5064 8.13147 17.7174 7.9205C17.9283 7.70952 18.0469 7.42337 18.0469 7.125Z"
+                                            fill="#D5A418"
+                                        />
+                                    </svg>
+                                </a>
+                                <a href="#">
+                                    <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M12.0471 2.05469C6.55425 2.05469 2.10156 6.50737 2.10156 12.0002C2.10156 17.493 6.55425 21.9457 12.0471 21.9457C17.5399 21.9457 21.9926 17.493 21.9926 12.0002C21.9926 6.50737 17.5399 2.05469 12.0471 2.05469ZM9.61249 16.1224H7.59853V9.64124H9.61249V16.1224ZM8.59308 8.8456C7.95698 8.8456 7.54569 8.39495 7.54569 7.83758C7.54569 7.26883 7.96941 6.83164 8.61898 6.83164C9.26854 6.83164 9.66636 7.26883 9.6788 7.83758C9.6788 8.39495 9.26854 8.8456 8.59308 8.8456ZM16.968 16.1224H14.9541V12.5306C14.9541 11.6946 14.6619 11.1269 13.9336 11.1269C13.3773 11.1269 13.0468 11.5112 12.9007 11.8811C12.8469 12.0126 12.8334 12.1991 12.8334 12.3845V16.1214H10.8184V11.708C10.8184 10.8989 10.7925 10.2224 10.7655 9.64021H12.5153L12.6075 10.5405H12.6479C12.9132 10.1178 13.5627 9.49413 14.6495 9.49413C15.9745 9.49413 16.968 10.382 16.968 12.2903V16.1224Z" fill="#D5A418" />
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-lg-2 col-md-6 offset-lg-1 mt-4 mt-lg-0">
+                            <b>Menu</b>
+                            <ul class="m-0 p-0">
+                                <li>
+                                    <a href="#meubels">Meubels</a>
+                                </li>
+                                <li>
+                                    <a href="#overons">Over ons</a>
+                                </li>
+                                <li>
+                                    <a href="#testimonials">Reviews</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-lg-2 col-md-6 mt-4 mt-lg-0">
+                            <b>Meubels</b>
+                            <ul class="m-0 p-0">
+                                <li>
+                                    <a class="meubel_footer" href="#seats">Stoelen</a>
+                                </li>
+                                <li>
+                                    <a class="meubel_footer" href="#table">Tafels</a>
+                                </li>
+                                <li>
+                                    <a class="meubel_footer" href="#sofa">Banken</a>
+                                </li>
+                                <li>
+                                    <a class="meubel_footer" href="#kasten">Kasten</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-lg-2 col-md-6 mt-4 mt-lg-0">
+                            <b>Contact</b>
+                            <ul class="m-0 p-0">
+                                <li>M: <a href="mailto:info@mobili.nl">info@mobili.nl</a></li>
+                                <li>T: <a href="tel:0123456789">012 34 56 789</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-lg-2 col-md-6 mt-4 mt-lg-0">
+                            <b>Openingtijden</b>
+                            <ul class="m-0 p-0">
+                                <li>Ma - Vr: 09:00 - 19:00</li>
+                                <li>Za - Zo: 10:00 - 20:00</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="bottom">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 text-center">
+                            <p>Non Copyrighted © 2023 Design and Development by Youri Pols</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="br">
+                <svg width="297" height="180" viewBox="0 0 297 180" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect opacity="0.05" x="673.186" y="196.858" width="550.773" height="550.773" rx="217" transform="rotate(120 673.186 196.858)" fill="#D5A418" />
+                </svg>
             </div>
         </section>
         <script type="module" src="./js/main.js"></script>

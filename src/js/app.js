@@ -5,9 +5,8 @@ import "swiper/css/pagination";
 
 const swiper = new Swiper(".swiper-testimonials", {
     modules: [Navigation, Pagination],
-    slidesPerView: 2,
-    // watchOverflow: false,
-    spaceBetween: 20,
+    slidesPerView: 1,
+    spaceBetween: 0,
     grabCursor: true,
     speed: 1000,
     loop: true,
@@ -23,6 +22,12 @@ const swiper = new Swiper(".swiper-testimonials", {
         clickable: true,
         renderBullet: function (index, className) {
             return '<span class="' + className + '"></span>';
+        },
+    },
+    breakpoints: {
+        768: {
+            slidesPerView: 2,
+            spaceBetween: 20,
         },
     },
 });
@@ -82,3 +87,11 @@ modelViewerNight.addEventListener("progress", onProgress);
 modelViewerTable.addEventListener("progress", onProgress);
 modelViewerSofa.addEventListener("progress", onProgress);
 modelViewerChair.addEventListener("progress", onProgress);
+
+$(".btn-popup").on("click", function (e) {
+    e.preventDefault();
+    $.fancybox.open($("#location"), {
+        touch: !1,
+        autoFocus: !1,
+    });
+});
